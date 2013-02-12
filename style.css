@@ -1,0 +1,28 @@
+html,
+body { 
+	background: #EFEACC;
+	margin: 0;
+	padding: 0;
+	color: #46433A;
+}
+h1 {
+	font-family: 'Bad Script', cursive;
+	font-size: 3.6em;
+	margin: 0;
+}
+a {
+	color:#46433A;
+}
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+.header {
+	background: #7A6A46;
+	color: #EFEACC;
+	border-bottom: 6px solid #F19C28;
+	padding: 20px 6px 20px 20%
+}
+.contents {
+	margin: 20px 6px 200px 20%
+}
