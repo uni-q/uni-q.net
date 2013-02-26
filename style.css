@@ -1,7 +1,8 @@
 /*reset*/
 html,
 body { 
-	background: #cdc2a2;
+	background: #f0eae3;
+  background-image: url(images/bg-0214.png);
 	margin: 0;
 	padding: 0;
 	color: #46433A;
@@ -18,7 +19,15 @@ ul {
 	list-style: none;
 	padding-left: 0;
 }
-
+.contents::after,
+.content-social::after,
+.content-site::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
 /*エリア*/
 
 .header {
@@ -34,93 +43,112 @@ ul {
   margin: 0 auto;
 }
 
-/**/
 
-.content-twin {
-  width: 396px;
+/*サイトエリア*/
+.content-box {
+  background: #fff;
   float: left;
-}
-
-.content-solo {
-  text-align: center;
-  width: 800px;
-  margin: 0 auto 8px;
-}
-
-.box {
-  background: #e8dfc3;
+  position: relative;
+  width: 240px;
+  margin-left: 20px;
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
-  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1 1px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 1 1px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 1 1px rgba(0, 0, 0, .3);
 }
-.content-left {
-  text-align: right;
-  margin-right: 4px;
+
+.content-site {
+  padding: 2px 14px 2px 14px;
+  margin-top: 20px;
 }
-.content-right {
-  margin-left: 4px;
-  text-align: left;
+
+.content-social {
+  padding: 2px 14px 2px 14px;
 }
-.box::after,
-.content-solo::before,
-.content-solo::after,
-.content-social::after,
-.content-site::after {
-  content: "";
-  display: block;
-  height: 0;
-  visibility: hidden;
-  clear: both;
-}
+
 /*テキスト*/
 .header h1 {
+  margin: .5em 10px 0;
   font-family: 'Julius Sans One', sans-serif;
   font-size: 3.6em;
-  margin: .5em 10px 0;
+  color: #ab0909;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.6);
 }
 .header h2 {
   color: #a75757;
-  margin: 1em 0 0;
+  margin: 1em 0 2em;
   font-size: 1em;
 }
-.contents h3 {
-font-weight: normal;
-margin: 0;
-font-size: 2em;
+
+.content-box h3 {
+  position: absolute;
+  top: -14px;
+  left: 10px;
+  padding: 4px 10px;
+  color: #fff;
+  font-weight: normal;
+  font-size: .8em;
 }
-.contents h3 + p {
-  margin: 0 0 2em;
+.content-box.uniq-pic h3 {
+  background: #f66085;
 }
-/*サイトエリア*/
-.content-site {
-  position: relative;
+.content-box.uniq-tech h3 {
+  background: #27bfdb;
 }
+.content-box.uniq-private h3 {
+  background: #ff770b;
+}
+
 .content-site img {
   border: 3px solid #fff;
   box-shadow: 0 0 8px rgba(0, 0, 0, .3);
 }
-.content-site h4 {
-  font-size: 1em;
-}
 .content-site p {
+  margin: .4em 0;
   font-size: .8em;
 }
-.content-left .content-site-text {
-  position: absolute;
-  float: left;
-  width: 210px;
-  left: 0;
+/*button*/
+.button {
+  width: auto;
+  cursor: pointer; 
+  display: inline-block; 
+  font-family: inherit; 
+  font-size: 14px; 
+  font-weight: bold; 
+  line-height: 1; 
+  margin: 0; 
+  padding: 6px 20px 6px; 
+  position: relative; 
+  text-align: center; 
+  text-decoration: none; 
+  background: #c3b791;
+  border: 1px solid #8f8155;
+  webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; 
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; 
+  color: #fff; 
+  -webkit-transition: background-color 0.15s ease-in-out; 
+  -moz-transition: background-color 0.15s ease-in-out; 
+  -o-transition: background-color 0.15s ease-in-out; 
+  transition: background-color 0.15s ease-in-out;
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   -ms-border-radius: 6px;
+   -o-border-radius: 6px;
+   border-radius: 6px; 
 }
-.content-right .content-site-text {
-  position: absolute;
-  float: left;
-  width: 210px;
-  left: 168px;
+.button:hover,
+.button:focus {
+  color: #fff;
+  background-color: #a89b71;
 }
-/*ソーシャルエリア*/
-.content-social {
-  margin-top: 1em;
+.button:active { 
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; 
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; 
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
+.content-site .button {
+  float: right;
 }
-
-
