@@ -43,18 +43,33 @@ ul {
   font-size: .8em;
 }
 .contents {
-  width: 800px;
   margin: 0 auto;
 }
-
+@media screen and (max-width: 799px) {
+  .contents {
+    width: auto;
+  }
+  .content-box {
+    float: inherit;
+    margin: 1.4em auto;
+  }
+}
+@media screen and (min-width: 800px)  {
+  .contents {
+    width: 800px;
+  }
+  .content-box {
+    float: left;
+    margin-left: 20px;
+  }
+}
 
 /*サイトエリア*/
+
 .content-box {
   background: #fff;
-  float: left;
   position: relative;
   width: 240px;
-  margin-left: 20px;
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -83,7 +98,7 @@ ul {
 }
 .header h2 {
   color: #a75757;
-  margin: 1em 0 2em;
+  margin: 1em 6px 2em;
   font-size: 1em;
 }
 
