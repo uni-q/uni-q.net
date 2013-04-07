@@ -1,21 +1,27 @@
-/*reset*/
+/* -----------------
+html
+-------------------- */
+
 body {
   -webkit-text-size-adjust: 100%;
   font-family:'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',sans-serif;
 }
 html,
 body { 
-	background: #f0eae3;
-  background-image: url(images/bg-0214.png);
+	background: #ebf5df;
+  background-image: url(images/bg-20130407.png);
+  background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
 	color: #46433A;
 }
 
-h1,h2,h3,h4,p {
+h1,h2,h3,h4 {
   margin: 0;
 }
-
+p {
+  margin: .4em 0;
+}
 a {
 	color:#46433A;
 }
@@ -23,113 +29,168 @@ ul {
 	list-style: none;
 	padding-left: 0;
 }
-.contents::after,
-.content-social::after,
-.content-site::after {
-  content: "";
-  display: block;
-  height: 0;
-  visibility: hidden;
-  clear: both;
-}
-/*エリア*/
 
+/* -----------------
+エリア
+-------------------- */
 .header {
-  text-align: center;
+text-align: center;
+padding: 1em 0 3em;
+margin: 0;
+width: auto;
 }
+
 .footer {
   text-align: center;
   margin: 2em 10px;
+  padding-top: .4em;
+  border-top: 1px solid #ccc;
   font-size: .8em;
+  color: #999;
 }
 .contents {
   margin: 0 auto;
+  padding: 0;
 }
-@media screen and (max-width: 799px) {
+/* -----------------
+ヘッダー
+-------------------- */
+.header h1 {
+  font-family: 'Lato', sans-serif;
+  color: #555;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.6);
+}
+.header p {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* -----------------
+RWD
+-------------------- */
+@media screen and (max-width: 479px) {
+  body {
+    background-size: contain;
+  }
+  .header {
+  text-align: center;
+  padding: 1em 0 3em;
+  margin: 0;
+  width: auto;
+  }
+  .header h1 {
+    margin-bottom: .4em;
+    font-size: 2em;
+  }
+  .header p {
+    font-size: .8em;
+  }
   .contents {
     width: auto;
   }
   .content-box {
     float: inherit;
-    margin: 1.4em auto;
+    margin: 0 auto 20px;
   }
 }
-@media screen and (min-width: 800px)  {
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .header {
+  text-align: center;
+  padding: 1em 0 3em;
+  margin: 0;
+  width: auto;
+  }
+  .header h1 {
+    margin-bottom: .4em;
+    font-size: 2em;
+  }
+  .header p {
+    font-size: .8em;
+  }
   .contents {
-    width: 800px;
+    width: auto;
+  }
+  .content-box {
+    float: inherit;
+    margin: 0 auto 20px;
+  }
+}
+@media screen and (min-width: 768px)  {
+  .header {
+    padding: 6em 0 3em;
+    text-align: left;
+    width: 50%;
+    margin-left: 50%;
+  }
+  .header h1 {
+    margin-bottom: .4em;
+    font-size: 3.6em;
+  }
+  .contents {
+    width: 680px;
   }
   .content-box {
     float: left;
     margin-left: 20px;
+        margin-bottom: 20px;
   }
 }
-
-/*サイトエリア*/
-
-.content-box {
-  background: #fff;
+/* -----------------
+content部分
+-------------------- */
+.content-box a {
+    text-decoration: none;
+}
+/* -----------------
+ブログ部分
+-------------------- */
+.content-box.uniq-pic,
+.content-box.uniq-tech {
+  width: 320px;
+  min-height: 320px;
   position: relative;
-  width: 240px;
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border: 1px solid #ccc;
-  box-shadow: 0 1 1px rgba(0, 0, 0, .3);
-  -webkit-box-shadow: 0 1 1px rgba(0, 0, 0, .3);
-  -moz-box-shadow: 0 1 1px rgba(0, 0, 0, .3);
-}
-
-.content-site {
-  padding: 2px 14px 2px 14px;
-  margin-top: 20px;
-}
-
-.content-social {
-  padding: 2px 14px 2px 14px;
-}
-
-/*テキスト*/
-.header h1 {
-  margin: .5em 10px 0;
-  font-family: 'Julius Sans One', sans-serif;
-  font-size: 3.6em;
-  color: #ab0909;
-  text-shadow: 0 1px 1px rgba(255,255,255,0.6);
-}
-.header h2 {
-  color: #a75757;
-  margin: 1em 6px 2em;
+  border-radius: 160px;
+  -webkit-border-radius: 160px;
+  -moz-border-radius: 160px;
   font-size: 1em;
 }
 
-.content-box h3 {
-  position: absolute;
-  top: -14px;
-  left: 10px;
-  padding: 4px 10px;
-  color: #fff;
-  font-weight: normal;
-  font-size: .8em;
+.content-box.uniq-pic {
+  background: rgba(134, 178, 94, .8);
 }
-.content-box.uniq-pic h3 {
-  background: #f66085;
-}
-.content-box.uniq-tech h3 {
-  background: #27bfdb;
-}
-.content-box.uniq-private h3 {
-  background: #ff770b;
+.content-box.uniq-tech {
+  background: rgba(116, 38, 77, .8);
 }
 
-.content-site img {
-  border: 3px solid #fff;
-  box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+.content-box h3 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 1.2em;
 }
-.content-site p {
-  margin: .4em 0;
+.content-box-inner p {
+  color: #fff;
   font-size: .8em;
 }
-/*button*/
+.content-box-inner {
+  padding: 38px 67px 30px;
+  border: none;
+  text-align: center;
+}
+/* -----------------
+ソーシャル部分
+-------------------- */
+.content-box.uniq-social {
+  text-align: center;
+  width: 100%;
+}
+.content-box.uniq-social img {
+  width: 64px;
+  height: 64px;
+}
+/* -----------------
+ボタン
+-------------------- */
 .button {
   width: auto;
   cursor: pointer; 
@@ -138,13 +199,13 @@ ul {
   font-size: 14px; 
   font-weight: bold; 
   line-height: 1; 
-  margin: 0; 
-  padding: 6px 20px 6px; 
+  margin: 0 10px 10px 0; 
+  padding: 0; 
   position: relative; 
   text-align: center; 
   text-decoration: none; 
-  background: #c3b791;
-  border: 1px solid #8f8155;
+  background: #dddddd;
+  border: 1px solid #999;
   webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; 
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; 
@@ -162,12 +223,43 @@ ul {
 .button:hover,
 .button:focus {
   color: #fff;
-  background-color: #a89b71;
+  background-color: #ccc;
 }
 .button:active { 
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; 
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; 
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
-.content-site .button {
-  float: right;
+
+/* -----------------
+motion
+-------------------- */
+.motion {
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -ms-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+
+}
+.header.motion {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+  -webkit-transition-property: left, right, top;
+  -moz-transition-property: left, right, top;
+  -ms-transition-property: left, right, top;
+  -o-transition-property: left, right, top;
+  transition-property: left, right, top;
+}
+/* -----------------
+clearfix
+-------------------- */
+.contents::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
 }
