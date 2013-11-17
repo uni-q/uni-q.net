@@ -144,7 +144,7 @@ content部分
 /* -----------------
 ブログ部分
 -------------------- */
-.content-box.uniq-pic,
+.content-box.uniq-folio,
 .content-box.uniq-tech {
   width: 320px;
   min-height: 320px;
@@ -155,7 +155,7 @@ content部分
   font-size: 1em;
 }
 
-.content-box.uniq-pic {
+.content-box.uniq-folio {
   background: rgba(134, 178, 94, .8);
 }
 .content-box.uniq-tech {
