@@ -2,10 +2,14 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!-- Bootstrap core CSS -->
+    <link href="bs/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
+
     <link rel="shortcut icon" href="favicon.ico">
     <meta property="og:title" content="Uni-Q.net">
     <meta property="og:site_name" content="Uni-Q.net">
@@ -14,32 +18,60 @@
 
     <title>Uni-Q.net</title>
 </head>
-<body class="motion">
-<div class="header motion">
-    <h1 class="motion">Uni-Q.net</h1>
-    <p class="motion">こんにちは。うに（uniq）です。<p>
-<p class="motion">本職では、webのデザインなどをしています。
-趣味で、イラストを描いてます。</p>
-</div>
 
-<div class="contents">
-    <div class="content-box motion uniq-folio">
-        <div class="content-box-inner">
-            <a href="http://folio.uni-q.net">
-            <h3>絵描きブログ</h3>
-            <img src="images/site-folio.png" width="180" height="160"></a>
-            <p>同人や趣味のイラスト</p>
+<body class="motion">
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Uni-Q.net</a>
         </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="http://blog.uni-q.net/" target="_blank">Blog</a></li>
+            <li><a href="https://www.flickr.com/photos/uni_q/sets/72157644359772398" target="_blank">illust</a></li>
+            <li><a href="#doujin">同人</a></li>
+            <li><a href="schedule.html">schedule</a></li>
+          </ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
-    <div class="content-box motion uniq-tech">
-        <div class="content-box-inner">
-            <a href="http://tech.uni-q.net">
-            <h3>技術系ブログ</h3>
-            <img src="images/site-tech.png" width="180" height="160"></a>
-            <p>web,css,デザインの話が多いです</p>
+
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+          <h1>Uni-Q.net</h1>
+      </div>
+    </div>
+
+    <div class="l_profile">
+        <hr>
+        <div class="container">
+            <div class="media">
+              <a class="pull-left" href="http://about.me/uniq">
+                <img class="media-object img-circle" src="images/uniq_180.jpg" alt="Uni-Q" width="100">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">石崎うに（Ishizaki Uni）</h4>
+                <p>萌え絵描きWebデザイナー。本職では、webのデザインなどをしています。趣味で、イラストを描いてます。</p>
+                <h4 class="media-heading">Uni-Q（うにきゅう）</h4>
+                <p>石崎うにの個人サークル。2004年から活動。メイドさん本、声優本、技術本。</p>
+              </div>
+            </div>
         </div>
+        <hr>
     </div>
-    <div class="content-box motion uniq-social">
+    <div class="l_social">
+        <div class="container">
 
 <!--
         <a href="http://uniq.hatenablog.com/"><img src="images/social-hatenablog.png"></a>
@@ -51,14 +83,12 @@ http://liblar.com/
 http://www.codeschool.com/users/uniq
  -->
 <!-- social -->
-        <a class="button" title="slideshare" href="https://www.facebook.com/uni.ishizaki"><img src="images/icon-social-facebook.png"></a>
+        <a class="button" title="facebook" href="https://www.facebook.com/pic.uniq"><img src="images/icon-social-facebook.png"></a>
         <a class="button" title="twitter" href="http://twitter.com/uniq"><img src="images/icon-social-twitter.png"></a>
-<!--         <a class="button" title="tumblr" href="http://uniq-blog.tumblr.com/"><img src="images/icon-social-tumblr.png"></a> -->
-        <br>
 <!--
         <a class="button" title="google plus" href="https://plus.google.com/115392528167214354183"><img src="images/icon-social-googleplus.png"></a>
 -->
-
+<!--         <a class="button" title="tumblr" href="http://uniq-blog.tumblr.com/"><img src="images/icon-social-tumblr.png"></a> -->
 <!-- tech -->
         <a class="button" title="slideshare" href="http://www.slideshare.net/yumi-uniq-ishizaki"><img src="images/icon-social-slideshare.png"></a>
         <a class="button" title="github" href="https://github.com/uni-q"><img src="images/icon-social-github.png"></a>
@@ -72,10 +102,112 @@ http://www.codeschool.com/users/uniq
         <a class="button" title="foursquare" href="https://ja.foursquare.com/uniq"><img src="images/icon-social-foursquare.png"></a>
 
         <a class="button" title="amazon wishlist" href="http://amzn.to/uniq-wishlist"><img src="images/icon-social-amazonwishlist.png"></a>
+        </div>
     </div>
-</div>
 
-<div class="footer">&copy; uni-q.net</div>
+    <div class="l_doujin" id="doujin">
+    <hr>
+        <div class="container">
+            <h2>同人誌</h2>
+            <div class="row">
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="thumbnail">
+                  <a href="http://blog.uni-q.net/entry/2014/08/06/194117"><img src="images/doujin/image_git.png" alt="イメージできるGit"></a>
+                  <div class="caption">
+                    <p>2014/08/17</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="thumbnail">
+                  <img src="images/doujin/nana_days.png" alt="NANA DAYS">
+                  <div class="caption">
+                    <p>2011/08/13</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="thumbnail">
+                  <img src="images/doujin/simapan_eater.jpg" alt="SiMAPAN★EATER">
+                  <div class="caption">
+                    <p>2008/08/17(成人向)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="thumbnail">
+                  <img src="images/doujin/nakimushi.jpg" alt="泣き虫メイドと縞ぱんをめぐる冒険">
+                  <div class="caption">
+                    <p>2007/08/19(成人向)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="thumbnail">
+                  <img src="images/doujin/tomarin2.jpg" alt="とまりん２">
+                  <div class="caption">
+                    <p>2007/02/11(成人向)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="thumbnail">
+                  <img src="images/doujin/tomarin.jpg" alt="とまりん">
+                  <div class="caption">
+                    <p>2006/08/11(成人向)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="thumbnail">
+                  <img src="images/doujin/tamago.jpg" alt="ふんわりタマゴの健康オムレツ">
+                  <div class="caption">
+                    <p>2005/12/30(成人向)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="thumbnail">
+                  <img src="images/doujin/yuusei.jpg" alt="メイドさんの遊性民営化">
+                  <div class="caption">
+                    <p>2005/08/14(成人向)</p>
+                  </div>
+                </div>
+              </div>
 
+            </div><!-- row -->
+            <hr>
+            <h3>合同誌</h3>
+            <div class="row">
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="thumbnail">
+                  <img src="images/doujin/hanseihansui2.jpg" alt="半醒半睡 2">
+                  <div class="caption">
+                    <p>2007/11/25(成人向)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <div class="thumbnail">
+                  <img src="images/doujin/hanseihansui.jpg" alt="半醒半睡">
+                  <div class="caption">
+                    <p>2006/08/13(成人向)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+    <hr>
+        <div class="container">
+            &copy; uni-q.net
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="bs/js/bootstrap.min.js"></script>
 </body>
 </html>

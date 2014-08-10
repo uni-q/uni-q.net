@@ -1,192 +1,83 @@
 /* -----------------
+navbar
+-------------------- */
+
+.navbar-default {
+  background-color: rgba(255,255,255,.6);
+}
+.navbar-default a.navbar-brand {
+  color: #000;
+  font-family: 'Lato', sans-serif;
+  font-size: 36px;
+}
+.navbar-default .navbar-nav>.active>a {
+  background-color: rgba(0,0,0,.8);
+  color: #ccc;
+}
+/* -----------------
 html
 -------------------- */
 
-body {
-  -webkit-text-size-adjust: 100%;
-  font-family:'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',sans-serif;
-}
 html,
-body { 
+body {
 	background: #ebf5df;
   background-image: url(images/bg-20130407.png);
   background-repeat: no-repeat;
-	margin: 0;
-	padding: 0;
-	color: #46433A;
+  background-position: top left;
+	color: #333;
 }
-
-h1,h2,h3,h4 {
-  margin: 0;
-}
-p {
-  margin: .4em 0;
-}
-a {
-	color:#46433A;
-}
-ul {
-	list-style: none;
-	padding-left: 0;
-}
-
 /* -----------------
 エリア
 -------------------- */
-.header {
-text-align: center;
-padding: 1em 0 3em;
-margin: 0;
-width: auto;
+.jumbotron {
+  min-height: 240px;
+  background-color: rgba(0,0,0,0);
+}
+.jumbotron h1 {
+  display: none;
+}
+.l_profile {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-.footer {
+.l_social img {
+  width: 32px;
+}
+.l_doujin a img,
+.l_doujin img {
+  height: 230px;
+}
+.l_doujin .caption {
   text-align: center;
-  margin: 2em 10px;
-  padding-top: .4em;
-  border-top: 1px solid #ccc;
-  font-size: .8em;
-  color: #999;
 }
-.contents {
-  margin: 0 auto;
-  padding: 0;
+footer {
+  text-align: right;
+  padding-bottom: 30px;
 }
-/* -----------------
-ヘッダー
--------------------- */
-.header h1 {
-  font-family: 'Lato', sans-serif;
-  color: #555;
-  text-shadow: 0 1px 1px rgba(255,255,255,0.6);
+.l_doujin hr,
+footer hr {
+  border-color: #333;
 }
-.header p {
-  margin-left: 1em;
-  margin-right: 1em;
-}
+
 
 /* -----------------
 RWD
 -------------------- */
 @media screen and (max-width: 479px) {
-  body {
-    background-size: contain;
+  .l_doujin a img,
+  .l_doujin img {
+    height: auto;
   }
-  .header {
-  text-align: center;
-  padding: 1em 0 3em;
-  margin: 0;
-  width: auto;
-  }
-  .header h1 {
-    margin-bottom: .4em;
-    font-size: 2em;
-  }
-  .header p {
-    font-size: .8em;
-  }
-  .contents {
-    width: auto;
-  }
-  .content-box {
-    float: inherit;
-    margin: 0 auto 20px;
-  }
+
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  .header {
-  text-align: center;
-  padding: 1em 0 3em;
-  margin: 0;
-  width: auto;
-  }
-  .header h1 {
-    margin-bottom: .4em;
-    font-size: 2em;
-  }
-  .header p {
-    font-size: .8em;
-  }
-  .contents {
-    width: auto;
-  }
-  .content-box {
-    float: inherit;
-    margin: 0 auto 20px;
-  }
+
 }
 @media screen and (min-width: 768px)  {
-  .header {
-    padding: 6em 0 3em;
-    text-align: left;
-    width: 50%;
-    margin-left: 50%;
-  }
-  .header h1 {
-    margin-bottom: .4em;
-    font-size: 3.6em;
-  }
-  .contents {
-    width: 680px;
-  }
-  .content-box {
-    float: left;
-    margin: 0 10px 20px 10px;
-  }
-}
-/* -----------------
-content部分
--------------------- */
-.content-box a {
-    text-decoration: none;
-}
-/* -----------------
-ブログ部分
--------------------- */
-.content-box.uniq-folio,
-.content-box.uniq-tech {
-  width: 320px;
-  min-height: 320px;
-  position: relative;
-  border-radius: 160px;
-  -webkit-border-radius: 160px;
-  -moz-border-radius: 160px;
-  font-size: 1em;
+
 }
 
-.content-box.uniq-folio {
-  background: rgba(134, 178, 94, .8);
-}
-.content-box.uniq-tech {
-  background: rgba(116, 38, 77, .8);
-}
-
-.content-box h3 {
-  color: #fff;
-  font-weight: normal;
-  font-size: 1.2em;
-}
-.content-box-inner p {
-  color: #fff;
-  font-size: .8em;
-}
-.content-box-inner {
-  padding: 38px 67px 30px;
-  border: none;
-  text-align: center;
-}
-/* -----------------
-ソーシャル部分
--------------------- */
-.content-box.uniq-social {
-  text-align: center;
-  width: 100%;
-}
-.content-box.uniq-social img {
-  width: 64px;
-  height: 64px;
-}
 /* -----------------
 ボタン
 -------------------- */
@@ -203,26 +94,23 @@ content部分
   position: relative; 
   text-align: center; 
   text-decoration: none; 
-  background: #dddddd;
-  border: 1px solid #999;
-  webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; 
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; 
+  background: #000;
+  border: 1px solid #000;
   color: #fff; 
   -webkit-transition: background-color 0.15s ease-in-out; 
   -moz-transition: background-color 0.15s ease-in-out; 
   -o-transition: background-color 0.15s ease-in-out; 
   transition: background-color 0.15s ease-in-out;
-   -webkit-border-radius: 6px;
-   -moz-border-radius: 6px;
-   -ms-border-radius: 6px;
-   -o-border-radius: 6px;
-   border-radius: 6px; 
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   -ms-border-radius: 3px;
+   -o-border-radius: 3px;
+   border-radius: 3px; 
 }
 .button:hover,
 .button:focus {
   color: #fff;
-  background-color: #ccc;
+  background-color: #333;
 }
 .button:active { 
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; 
@@ -240,25 +128,4 @@ motion
   transition-duration: 0.7s;
 
 }
-.header.motion {
-  -webkit-transition-property: height, width;
-  -moz-transition-property: height, width;
-  -ms-transition-property: height, width;
-  -o-transition-property: height, width;
-  transition-property: height, width;
-  -webkit-transition-property: left, right, top;
-  -moz-transition-property: left, right, top;
-  -ms-transition-property: left, right, top;
-  -o-transition-property: left, right, top;
-  transition-property: left, right, top;
-}
-/* -----------------
-clearfix
--------------------- */
-.contents::after {
-  content: "";
-  display: block;
-  height: 0;
-  visibility: hidden;
-  clear: both;
-}
+
