@@ -30,16 +30,22 @@ body {
 エリア
 -------------------- */
 .jumbotron {
-  min-height: 240px;
+  min-height: 350px;
   background-color: rgba(0,0,0,0);
 }
-.jumbotron h1 {
-  display: none;
-}
 .l_profile {
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
 }
-
+.l_menu .navbar {
+  margin-bottom: 0;
+}
+.l_menu .navbar .blog { border-bottom: 3px solid #78CE68;}
+.l_menu .navbar .illust { border-bottom: 3px solid #E774B4;}
+.l_menu .navbar .doujin { border-bottom: 3px solid #FFCE4F;}
+.l_menu .navbar .schedule { border-bottom: 3px solid #84A2FF;}
 .l_social img {
   width: 32px;
 }
@@ -54,6 +60,7 @@ footer {
   text-align: right;
   padding-bottom: 30px;
 }
+.l_social hr,
 .l_doujin hr,
 footer hr {
   border-color: #333;
@@ -68,7 +75,9 @@ RWD
   .l_doujin img {
     height: auto;
   }
-
+  body {
+    background-size: 480px;
+  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
