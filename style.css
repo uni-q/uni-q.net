@@ -32,6 +32,7 @@ body {
 .jumbotron {
   min-height: 350px;
   background-color: rgba(0,0,0,0);
+  font-family: 'Lato', sans-serif;
 }
 .l_profile {
   padding-top: 30px;
