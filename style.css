@@ -42,8 +42,12 @@ body {
 .l_menu .navbar {
   margin-bottom: 0;
 }
+.l_menu .navbar-nav {
+  margin-bottom: 0;
+}
 .l_menu .navbar .blog { border-bottom: 3px solid #78CE68;}
 .l_menu .navbar .illust { border-bottom: 3px solid #E774B4;}
+.l_menu .navbar .draw { border-bottom: 3px solid #C02453;}
 .l_menu .navbar .doujin { border-bottom: 3px solid #FFCE4F;}
 .l_menu .navbar .schedule { border-bottom: 3px solid #84A2FF;}
 .l_social img {
